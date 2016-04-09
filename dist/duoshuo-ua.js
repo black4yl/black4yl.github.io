@@ -236,7 +236,7 @@ var getUAString = function (local) {
   var agent = UAParser.parse(local.agent);
   return '<div class="ds-os">' + UAParser.getString(agent.os) + '</div>' +
     '<div class="ds-br">' + UAParser.getString(agent.browser) + '</div>' +
-    (local.webmaster ? '<div class=ds-webmaster>一道闪电</div>' : '');
+    (local.webmaster ? '<div class=ds-webmaster>站长</div>' : '');
 };
 
 }.call({});
