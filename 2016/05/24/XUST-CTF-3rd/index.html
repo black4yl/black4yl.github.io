@@ -5,12 +5,12 @@
   
   <title>XUST-CTF-3Rd | Yllen&#39;s Blog | Ring3.XYZ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="������XUST-CTF������������Ŀ����˼·">
+  <meta name="description" content="第三届XUST-CTF逆向与溢出题目出题思路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="XUST-CTF-3Rd">
 <meta property="og:url" content="http://ring3.xyz/2016/05/24/XUST-CTF-3Rd/index.html">
 <meta property="og:site_name" content="Yllen's Blog | Ring3.XYZ">
-<meta property="og:description" content="������XUST-CTF������������Ŀ����˼·">
+<meta property="og:description" content="第三届XUST-CTF逆向与溢出题目出题思路">
 <meta property="og:image" content="http://ring3.xyz/img/pic/xustctf/jietu1.png">
 <meta property="og:image" content="http://ring3.xyz/img/pic/xustctf/jietu2.png">
 <meta property="og:image" content="http://ring3.xyz/img/pic/xustctf/jietu3.png">
@@ -21,10 +21,10 @@
 <meta property="og:image" content="http://ring3.xyz/img/pic/xustctf/jietu8.png">
 <meta property="og:image" content="http://ring3.xyz/img/pic/xustctf/jietu9.png">
 <meta property="og:image" content="http://ring3.xyz/img/pic/xustctf/jietu10.png">
-<meta property="og:updated_time" content="2016-05-24T05:09:01.382Z">
+<meta property="og:updated_time" content="2016-05-24T05:11:31.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="XUST-CTF-3Rd">
-<meta name="twitter:description" content="������XUST-CTF������������Ŀ����˼·">
+<meta name="twitter:description" content="第三届XUST-CTF逆向与溢出题目出题思路">
 <meta name="twitter:image" content="http://ring3.xyz/img/pic/xustctf/jietu1.png">
   
     <link rel="alternative" href="/atom.xml" title="Yllen&#39;s Blog | Ring3.XYZ" type="application/atom+xml">
@@ -165,7 +165,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/PWN/" style="font-size: 10px;">PWN</a> <a href="/tags/心来听/" style="font-size: 20px;">心来听</a> <a href="/tags/����/" style="font-size: 15px;">����</a>
+                        <a href="/tags/PWN/" style="font-size: 10px;">PWN</a> <a href="/tags/心来听/" style="font-size: 20px;">心来听</a> <a href="/tags/杂类/" style="font-size: 10px;">杂类</a>
                     </div>
                 </section>
                 
@@ -277,7 +277,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/����/">����</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂类/">杂类</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -287,29 +287,29 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>������XUST-CTF������������Ŀ����˼·</p>
+        <p>第三届XUST-CTF逆向与溢出题目出题思路</p>
 <a id="more"></a>
-<p>#������XUST - CTF<br>REVERSE��PWN ���ֳ���˼·</p>
+<p>#第三届XUST - CTF<br>REVERSE、PWN 部分出题思路</p>
 <blockquote>
-<p>####���� YLLEN</p>
+<p>####作者 YLLEN</p>
 </blockquote>
-<p>##����</p>
-<p>###REVERSE 1��������:<br>����˼·�����е���ĸ���� ���У� ��A�� + 2016 ��% 26 ��ƫ�ơ�<br><img src="http://ring3.xyz/img/pic/xustctf/jietu1.png" alt="ͼƬ1"><br>CHECK KEY ����<br><img src="http://ring3.xyz/img/pic/xustctf/jietu2.png" alt="ͼƬ2"><br>����һ�ֽⷨ<br><img src="http://ring3.xyz/img/pic/xustctf/jietu3.png" alt="ͼƬ3"></p>
-<p>###REVERSE 2<br>��Ҫ���㷨������˼��<br><img src="http://ring3.xyz/img/pic/xustctf/jietu4.png" alt="ͼƬ4"><br>�˴���һ��˼��ȥ д ���ܵ� ������ �����в�ͨ�ģ���Ϊ T%255=s ����֪s��T�ǲ�ȷ���ģ�������Ҫ���ñ���ö�ٵķ�ʽ��<br><img src="http://ring3.xyz/img/pic/xustctf/jietu5.png" alt="ͼƬ5"><br>REVERSE 3 ͬ������ REVERSE 1 ���뿴��������REVERSE 1�ķ���</p>
-<p>###PWN:<br>����Ȩ�޿��Ʋ���������û�з�linux��pwn������Ϊwin32�¾��仺����������ѧ�⣬����ͨ�����ͳ��ȴ��ڻ�������С���ַ���������<code>ջ����</code>;��ĿҪ��<code>Win32Xp�µ���Calc</code>; ����Ӧ���Ƿ����ַ������³�����ִ��pop ebp����retָ��ȡ����espָ��Ӧ��ΪJmp Esp ָ���ĵ�ַ����ô������תȥִ��jmp esp���� ֮��esp ָ��Ϊ shellcode�����ڳ���û�п���DEP���Լ�GS��stack cookie��������ջ�ǿ�ִ�еġ�<br><img src="http://ring3.xyz/img/pic/xustctf/jietu6.png" alt="ͼƬ6"><br>Payload �ṹΪ ��A�� <em> X + pointer2_JMP_ESP + shellcode (���ܵ���������)����v8 �� bp - C8h����Ҳ���� bp - 200 ,��ôbp - 204 ���� �ϸ�ջ�� ebp,���ص�ַ����bp - 208 ��������Payload�ṹΪ<br>`payload = ‘A’</em>200 + ‘b’*4 + ‘\x7F\xFA\x45\x12’[::-1]+shellcode`<br>����Exp��<br><img src="http://ring3.xyz/img/pic/xustctf/jietu7.png" alt="ͼƬ7"></p>
-<p>##����</p>
-<p>###REVERSE 1<br>���⿼������ѡ�ֶ���2��������ʱ���Եֿ���̬�����Լ���̬���������������������õ���<code>ջ�ƻ�����</code>��������Ч�ֿ�IDAF5������<code>��̬���������⼼��</code>����<code>�ӽ�����ʽ���к��Ĵ���</code>���ж�̬�����ԣ���Ч�ֿ���̬���Թ��ߣ�����Ҫ������ѡ���ܿ�������ͨջָ�������α���̬�޸ĵģ�Ȼ��������Ӧ����������ѡ��nop����Щ�����󼴿���F5������Ҫ��ѡ�����������⸸�ӽ��̣����մ����ӽ��̷����Լ����� �������������⣬����ͨ�����������зų�����ʾ���������ؼ��������տ���ͨ���޸ĺ�������ֵ����nop�����ش������ƹ����⡣<br><img src="http://ring3.xyz/img/pic/xustctf/jietu8.png" alt="ͼƬ8"></p>
-<p>����ջ�ƻ��������������Բο��ҵ�bLog��<code>http://yllen.lofter.com/post/30e12f_a76ecfc</code></p>
-<p>����������</p>
-<p><img src="http://ring3.xyz/img/pic/xustctf/jietu9.png" alt="ͼƬ9"></p>
-<p>��������Key�Ľ��ܹ���</p>
-<p>###REVERSE 2<br> ����ѡ�ֶ�������Windows �쳣���Ʒ����Լ����������������������൱���Ĳ���ʶ�����ֽ�<br><img src="http://ring3.xyz/img/pic/xustctf/jietu10.png" alt="ͼƬ10"><br>������ sub_4041C0 �� ����<code>SetUnhandledExceptionFilter</code>�������쳣���������������������쳣�׳�ʱ������ϵͳ�����жϳ����Ƿ����ڵ���״̬�����ǵĻ�ֱ�ӽ��쳣��Ϣ������������û�е����������ᴫ���ڲ��쳣����������;�����������׳�һ���쳣ʱ����û�е����������������õ��쳣���������ǳ������д�����һ���ᴦ���õ�����������ִ�У������е�����������ODʱ���쳣��OD��������OD�޷����������쳣����ϵͳ�ڲ��쳣�������У�ͨ�����򵥴ֱ��ķ�ʽ���ǵ����쳣����(����XXXX���ڴ治��read ���� ������ʾ��)��Ȼ�������Ľ����������������Ͼ��������쳣���������з����ԵĻ���ԭ��������֮�󣬿�ʼ��������….<br>�����ڵ���ȷ����ť֮�󣬽��봦���������ڴ��������У��Ҽ������������½ṹ�ķ����Դ��� <code>0xCC | ��YLLEN�� | KEY XOR 0x11 | ��XXXXXXXX��</code>�� ����</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">__EMIT <span class="number">0xCC</span>					<span class="comment">// int 3</span></span><br><span class="line"></span><br><span class="line">__EMIT <span class="number">0x79</span>					<span class="comment">// yllen</span></span><br><span class="line">__EMIT <span class="number">0x31</span></span><br><span class="line">__EMIT <span class="number">0x31</span></span><br><span class="line">__EMIT <span class="number">0x65</span></span><br><span class="line">__EMIT <span class="number">0x6e</span></span><br><span class="line"></span><br><span class="line">__EMIT <span class="number">0x30</span>		<span class="comment">// һ��xor 0x11�������֣����쳣���������и��ݴ����������쳣�������ɺ���eip</span></span><br><span class="line"></span><br><span class="line">__EMIT <span class="number">0x5b</span>     	 <span class="comment">// һЩ�������ֽڣ�û��ʵ�ʺ��壬ֻ�������ŷ��������ͷ���������</span></span><br><span class="line">__EMIT <span class="number">0x93</span></span><br><span class="line">__EMIT <span class="number">0x7e</span></span><br><span class="line">__EMIT <span class="number">0x65</span></span><br><span class="line">__EMIT <span class="number">0xba</span></span><br><span class="line">__EMIT <span class="number">0xaf</span></span><br><span class="line">__EMIT <span class="number">0xd5</span></span><br><span class="line">__EMIT <span class="number">0x2b</span></span><br><span class="line">__EMIT <span class="number">0x6</span></span><br><span class="line">__EMIT <span class="number">0xbb</span></span><br><span class="line">__EMIT <span class="number">0xb3</span></span><br><span class="line">__EMIT <span class="number">0xff</span></span><br><span class="line">__EMIT <span class="number">0x77</span></span><br><span class="line">__EMIT <span class="number">0x5d</span></span><br><span class="line">__EMIT <span class="number">0x5d</span></span><br><span class="line">__EMIT <span class="number">0x3d</span></span><br><span class="line">__EMIT <span class="number">0xa7</span></span><br><span class="line">__EMIT <span class="number">0x43</span></span><br><span class="line">__EMIT <span class="number">0xcd</span></span><br><span class="line">__EMIT <span class="number">0x97</span></span><br><span class="line">__EMIT <span class="number">0x72</span></span><br><span class="line">__EMIT <span class="number">0xaf</span></span><br><span class="line">__EMIT <span class="number">0xef</span></span><br><span class="line">__EMIT <span class="number">0x7e</span></span><br><span class="line">__EMIT <span class="number">0xd9</span></span><br><span class="line">__EMIT <span class="number">0x6a</span></span><br></pre></td></tr></table></figure>
-<p>�쳣�������̣����������� int 3 �����쳣��<br>�������������������úõ��쳣�����������쳣�������������쳣�����ĵ�ַ+6�������֣�����<code>xor 0x11</code>������Ϊ������ִ�е�eipֵ��Ҳ�������λ�ָ���������ĳ�������<br>�ƹ�������һ�����Լ�������Щ�ӽ�ȥ�ġ���ָ���Ȼ��nop�����ڶ��־�����д�쳣�����������ڴ��������н�����Щ���룬����ʱ����ȥ������������������������<br>��������2��˼·��<br>���쳣����������patch ���´�����ȥ�� Ȼ�󽫴�����ȫ��Ȩ�޷��ʣ�Ϊ�ɶ���д��ִ�У���ʱ����ִ��ʱ�����Զ��������λ�ָ�� �޸�Ϊnop</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">0040416D  |.  8BF9          mov edi,ecx	  edi -&gt; �쳣eip </span><br><span class="line">0040416F  |.  33C9          xor ecx,ecx	</span><br><span class="line">00404171  |.  8ACA          mov cl,dl			</span><br><span class="line">00404173  |.  80F1 11       xor cl,0x11			cl ���� ��ָ�� �ֽ���</span><br><span class="line">00404176  |.  B8 90000000   mov eax,0x90			NOP</span><br><span class="line">0040417B  |.  F3:AA         rep stos byte ptr es:[edi]			����ΪNOP</span><br></pre></td></tr></table></figure>
-<p>Patch ֮�� F5����</p>
-<p><img src="" alt="ͼƬ10"></p>
-<p>###PWN 2<br><code>X64 ��ͨ��gadgets �Ĺ��� ������http://drops.wooyun.org/papers/7551</code></p>
+<p>##初赛</p>
+<p>###REVERSE 1（凯撒）:<br>出题思路，所有的字母都会 进行（ ‘A’ + 2016 ）% 26 的偏移。<br><img src="http://ring3.xyz/img/pic/xustctf/jietu1.png" alt="图片1"><br>CHECK KEY 流程<br><img src="http://ring3.xyz/img/pic/xustctf/jietu2.png" alt="图片2"><br>给出一种解法<br><img src="http://ring3.xyz/img/pic/xustctf/jietu3.png" alt="图片3"></p>
+<p>###REVERSE 2<br>主要是算法方面的思考<br><img src="http://ring3.xyz/img/pic/xustctf/jietu4.png" alt="图片4"><br>此处用一般思想去 写 加密的 逆过程 ，是行不通的，因为 T%255=s ，已知s，T是不确定的，所有需要采用暴力枚举的方式。<br><img src="http://ring3.xyz/img/pic/xustctf/jietu5.png" alt="图片5"><br>REVERSE 3 同决赛的 REVERSE 1 ，请看下面决赛REVERSE 1的分析</p>
+<p>###PWN:<br>由于权限控制不当，所以没有放linux下pwn，此题为win32下经典缓冲区溢出教学题，其中通过发送长度大于缓冲区大小的字符串，导致<code>栈溢出</code>;题目要求<code>Win32Xp下弹出Calc</code>; 流程应该是发送字符串导致程序在执行pop ebp后，ret指令取出的esp指向应该为Jmp Esp 指令的地址，那么程序会转去执行jmp esp，而 之后esp 指向为 shellcode，由于程序没有开启DEP，以及GS（stack cookie），所以栈是可执行的。<br><img src="http://ring3.xyz/img/pic/xustctf/jietu6.png" alt="图片6"><br>Payload 结构为 ‘A’ <em> X + pointer2_JMP_ESP + shellcode (功能弹出计算器)由于v8 在 bp - C8h出，也就是 bp - 200 ,那么bp - 204 就是 上个栈的 ebp,返回地址就在bp - 208 所以最终Payload结构为<br>`payload = ‘A’</em>200 + ‘b’*4 + ‘\x7F\xFA\x45\x12’[::-1]+shellcode`<br>最终Exp：<br><img src="http://ring3.xyz/img/pic/xustctf/jietu7.png" alt="图片7"></p>
+<p>##决赛</p>
+<p>###REVERSE 1<br>此题考查比赛选手对于2进制逆向时，对抵抗静态分析以及动态分析技术的能力，此题用到了<code>栈破坏技术</code>，可以有效抵抗IDAF5插件，<code>动态虚拟机检测技术</code>，以<code>子进程形式运行核心代码</code>进行动态反调试，有效抵抗动态调试工具，其中要求比赛选手能看懂到看通栈指针是如何被动态修改的，然后进行相应处理，可以选择nop掉这些代码后即可用F5，该题要求选手能深刻理解父子进程，掌握创建子进程反调试技术； 对于虚拟机检测，可以通过比赛过程中放出的提示，进行相关检索，最终可以通过修改函数返回值，或nop掉相关代码来绕过检测。<br><img src="http://ring3.xyz/img/pic/xustctf/jietu8.png" alt="图片8"></p>
+<p>关于栈破坏，详情分析可以参考我的bLog：<code>http://yllen.lofter.com/post/30e12f_a76ecfc</code></p>
+<p>虚拟机检测</p>
+<p><img src="http://ring3.xyz/img/pic/xustctf/jietu9.png" alt="图片9"></p>
+<p>这里给出Key的解密过程</p>
+<p>###REVERSE 2<br> 考察选手对于利用Windows 异常机制反调试技术，程序代码中填充了相当多的不可识别的字节<br><img src="http://ring3.xyz/img/pic/xustctf/jietu10.png" alt="图片10"><br>程序在 sub_4041C0 出 调用<code>SetUnhandledExceptionFilter</code>设置了异常处理函数，当程序中有异常抛出时，操作系统首先判断程序是否处于调试状态，若是的话直接将异常信息给调试器，若没有调试器，则会传入内部异常处理机制中;当程序主动抛出一个异常时，若没有调试器，则程序设置的异常处理函数登场，进行处理，一般会处理得当，程序继续执行，但当有调试器，比如OD时，异常由OD处理，若OD无法处理，则异常进入系统内部异常处理链中，通常最简单粗暴的方式就是弹出异常窗口(比如XXXX该内存不能read 或者 别的提示框)，然后潇洒的将程序结束掉，以上就是利用异常机制来进行反调试的基本原理，理解之后，开始进入主题….<br>本体在点击确定按钮之后，进入处理函数，在处理函数中，我加入了形如以下结构的反调试代码 <code>0xCC | “YLLEN” | KEY XOR 0x11 | “XXXXXXXX”</code>， 例如</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">__EMIT <span class="number">0xCC</span>					<span class="comment">// int 3</span></span><br><span class="line"></span><br><span class="line">__EMIT <span class="number">0x79</span>					<span class="comment">// yllen</span></span><br><span class="line">__EMIT <span class="number">0x31</span></span><br><span class="line">__EMIT <span class="number">0x31</span></span><br><span class="line">__EMIT <span class="number">0x65</span></span><br><span class="line">__EMIT <span class="number">0x6e</span></span><br><span class="line"></span><br><span class="line">__EMIT <span class="number">0x30</span>		<span class="comment">// 一个xor 0x11后的数字，在异常处理函数中根据此数字设置异常处理完成后的eip</span></span><br><span class="line"></span><br><span class="line">__EMIT <span class="number">0x5b</span>     	 <span class="comment">// 一些随机的字节，没有实际含义，只用来干扰反编译器和反汇编引擎</span></span><br><span class="line">__EMIT <span class="number">0x93</span></span><br><span class="line">__EMIT <span class="number">0x7e</span></span><br><span class="line">__EMIT <span class="number">0x65</span></span><br><span class="line">__EMIT <span class="number">0xba</span></span><br><span class="line">__EMIT <span class="number">0xaf</span></span><br><span class="line">__EMIT <span class="number">0xd5</span></span><br><span class="line">__EMIT <span class="number">0x2b</span></span><br><span class="line">__EMIT <span class="number">0x6</span></span><br><span class="line">__EMIT <span class="number">0xbb</span></span><br><span class="line">__EMIT <span class="number">0xb3</span></span><br><span class="line">__EMIT <span class="number">0xff</span></span><br><span class="line">__EMIT <span class="number">0x77</span></span><br><span class="line">__EMIT <span class="number">0x5d</span></span><br><span class="line">__EMIT <span class="number">0x5d</span></span><br><span class="line">__EMIT <span class="number">0x3d</span></span><br><span class="line">__EMIT <span class="number">0xa7</span></span><br><span class="line">__EMIT <span class="number">0x43</span></span><br><span class="line">__EMIT <span class="number">0xcd</span></span><br><span class="line">__EMIT <span class="number">0x97</span></span><br><span class="line">__EMIT <span class="number">0x72</span></span><br><span class="line">__EMIT <span class="number">0xaf</span></span><br><span class="line">__EMIT <span class="number">0xef</span></span><br><span class="line">__EMIT <span class="number">0x7e</span></span><br><span class="line">__EMIT <span class="number">0xd9</span></span><br><span class="line">__EMIT <span class="number">0x6a</span></span><br></pre></td></tr></table></figure>
+<p>异常处理流程：程序首先由 int 3 触发异常，<br>正常情况进入事先设置好的异常处理函数，异常处理函数根据异常发生的地址+6处的数字，将其<code>xor 0x11</code>后设置为接下来执行的eip值，也就是这段花指令后真正的程序代码<br>绕过方法，一种是自己解析这些加进去的“花指令”，然后nop掉，第二种就是重写异常处理函数，在处理函数中解析这些代码，运行时进行去“花”操作，这样就行啦。<br>给出方法2的思路：<br>在异常处理函数中patch 以下代码进去， 然后将代码段全部权限访问，为可读可写可执行，此时程序执行时，会自动将代码段花指令 修改为nop</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">0040416D  |.  8BF9          mov edi,ecx	  edi -&gt; 异常eip </span><br><span class="line">0040416F  |.  33C9          xor ecx,ecx	</span><br><span class="line">00404171  |.  8ACA          mov cl,dl			</span><br><span class="line">00404173  |.  80F1 11       xor cl,0x11			cl 保存 花指令 字节数</span><br><span class="line">00404176  |.  B8 90000000   mov eax,0x90			NOP</span><br><span class="line">0040417B  |.  F3:AA         rep stos byte ptr es:[edi]			填充为NOP</span><br></pre></td></tr></table></figure>
+<p>Patch 之后 F5可用</p>
+<p><img src="" alt="图片10"></p>
+<p>###PWN 2<br><code>X64 下通用gadgets 的构造 ：详情http://drops.wooyun.org/papers/7551</code></p>
 
       
     </div>
@@ -321,7 +321,7 @@
         <p><span>本文标题:</span><a href="/2016/05/24/XUST-CTF-3Rd/">XUST-CTF-3Rd</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 YLLEN 的个人博客">YLLEN</a></p>
         <p><span>发布时间:</span>2016年05月24日 - 13时08分</p>
-        <p><span>最后更新:</span>2016年05月24日 - 13时09分</p>
+        <p><span>最后更新:</span>2016年05月24日 - 13时11分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/24/XUST-CTF-3Rd/" title="XUST-CTF-3Rd">http://ring3.xyz/2016/05/24/XUST-CTF-3Rd/</a>
             <span class="copy-path" data-clipboard-text="原文: http://ring3.xyz/2016/05/24/XUST-CTF-3Rd/　　作者: YLLEN" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -338,8 +338,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2016/05/24/XUST-CTF-3rd1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">XUST-CTF-RE&amp;PWN</div>
+    <a href="/2016/05/11/毕设那些小事1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">毕设那些小事1</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -443,12 +443,12 @@
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/05/24/XUST-CTF-3rd1/" title="下一篇: XUST-CTF-RE&amp;PWN">
+            <a href="/2016/05/11/毕设那些小事1/" title="下一篇: 毕设那些小事1">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/24/XUST-CTF-3Rd/">XUST-CTF-3Rd</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/24/XUST-CTF-3rd1/">XUST-CTF-RE&PWN</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/毕设那些小事1/">毕设那些小事1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/学习一点linxu下ROP/">Linux 下 Rop 的学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/11/毕设那些小事/">毕设那些小事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/09/开博了/">新的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/08/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/24/XUST-CTF-3Rd/">XUST-CTF-3Rd</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/毕设那些小事1/">毕设那些小事1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/学习一点linxu下ROP/">Linux 下 Rop 的学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/11/毕设那些小事/">毕设那些小事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/09/开博了/">新的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/08/hello-world/">Hello World</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
